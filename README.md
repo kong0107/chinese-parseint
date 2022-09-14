@@ -2,23 +2,25 @@
 Parse Chinese numeric strings to integer; also usable for client-side script.
 
 ## In browsers (front-end JavaScript)
-Download `chinese-parseint.js`.
 ### Usage
 ```html
-<script src="chinese-parseint.js"></script>
-<!-- `chinese_parseInt` would be defined. -->
+<script src="https://cdn.jsdelivr.net/gh/kong0107/chinese-parseint/chinese-parseint.js"></script>
+<!-- `chinese_parseInt()` would be defined. -->
 <script>
     console.log(chinese_parseInt('六八九萬')); ///< display 6890000 in console.
 </script>
 ```
 
 ## In Node.js
-`npm install chinese-parseint`
+```bash
+npm install chinese-parseint
+```
+
 ### Usage
-```javascript
+```js
 var chinese_parseInt = require('chinese-parseint');
-chinese_parseInt('一千零一十'); ///< returns 1010
-chinese_parseInt('二十四万二'); ///< returns 242000
+chinese_parseInt('負一千零一十'); ///< returns -1010
+// chinese_parseInt('二十四万二'); /// not supported anymore; see version 1.0 to support
 ```
 
 ## Notes
